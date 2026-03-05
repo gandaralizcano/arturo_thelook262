@@ -2,6 +2,12 @@ view: human {
   sql_table_name: demo_db.Human ;;
   drill_fields: [id]
 
+  filter: lastname {
+    type: string
+    label: "lastname required"
+    description: "Filter results by the region the order was placed in."
+  }
+
   dimension: id {
     primary_key: yes
     type: number
