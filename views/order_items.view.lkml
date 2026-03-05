@@ -3,9 +3,8 @@ view: order_items {
   drill_fields: [id]
 
   filter: price {
-    type: string
-    label: "filter by price"
-    description: "Filter results by the region the order was placed in."
+    type: number
+    suggest_dimension: sale_price
   }
 
   dimension: id {
