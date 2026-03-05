@@ -2,6 +2,12 @@ view: order_items {
   sql_table_name: demo_db.order_items ;;
   drill_fields: [id]
 
+  filter: price {
+    type: string
+    label: "filter by price"
+    description: "Filter results by the region the order was placed in."
+  }
+
   dimension: id {
     primary_key: yes
     type: number
