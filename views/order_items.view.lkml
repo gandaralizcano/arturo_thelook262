@@ -3,6 +3,7 @@ view: order_items {
   drill_fields: [id]
 
   filter: price {
+    label: "Test"
     type: number
     suggest_dimension: sale_price
   }
