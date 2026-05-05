@@ -35,6 +35,14 @@ view: products {
     type: string
     sql: ${TABLE}.sku ;;
   }
+  dimension: dim_with_commas {
+    type: string
+    sql: CONCAT (${id},", ", ${brand}) ;;
+  }
+  filter: filter_with_commas{
+    suggest_dimension: dim_with_commas
+  }
+
   measure: count {
     type: count
     drill_fields: [id, item_name, inventory_items.count]
